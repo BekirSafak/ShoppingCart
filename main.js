@@ -38,6 +38,22 @@ class UI {
         </div>
         `
         cardList.appendChild(listItem);
+    };
+
+    removeCart() {
+        let removeBTN = document.getElementsByClassName('btn-delete');
+        let self = this;
+        for (let i = 0; i < removeBTN.length; i++) {
+            removeBTN[i].addEventListener('click', function () {
+                this.parentElement.parentElement.parentElement.remove();
+            })
+        }
+    };
+
+    cartCount() {
+        let cardListItem = cardList.getElementsByClassName('list-item');
+        let itemCount = document.getElementById('item-count');
+        itemCount.innerHTML = cardListItem.length;
     }
 }
 
@@ -63,6 +79,14 @@ for (let i = 0; i < card.length; i++) {
         let ui = new UI();
         ui.addToCart(shopping);
         // ? burası shopping değikenini class UI'ye gönderiyor.
+
+        // ? Silme işleminin çalışması için gerekli.
+        ui.removeCart();
+        // ? Silme işleminin çalışması için gerekli.
+
+        // ? Sepete eklenen ürün sayısı için gerekli.
+        ui.cartCount();
+        // ? Sepete eklenen ürün sayısı için gerekli.
 
         event.preventDefault();
     })
