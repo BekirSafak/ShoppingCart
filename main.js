@@ -53,6 +53,11 @@ for (let i = 0; i < card.length; i++) {
         let image = card[i].getElementsByClassName('card-img-top')[0].src;
         // console.log(image);
 
+        // ? Butonlara tek sefer tıklanabilir hale getiriyor. Böylelikle birden fazla ekleme durumu ortadan kalkmış oluyor.
+        addBTN[i].classList.add("disabled");
+        addBTN[i].textContent = "In Card";
+        // ? Butonlara tek sefer tıklanabilir hale getiriyor. Böylelikle birden fazla ekleme durumu ortadan kalkmış oluyor.
+
         let shopping = new Shopping(title, price, image);
         // ? burası shopping değikenini class UI'ye gönderiyor.
         let ui = new UI();
