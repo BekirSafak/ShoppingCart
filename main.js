@@ -46,6 +46,9 @@ class UI {
         for (let i = 0; i < removeBTN.length; i++) {
             removeBTN[i].addEventListener('click', function () {
                 this.parentElement.parentElement.parentElement.remove();
+                // ? Sepetten silme işlemi yapılınca count değerini düşürüyor.
+                self.cartCount();
+                // ? Sepetten silme işlemi yapılınca count değerini düşürüyor.
             })
         }
     };
