@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,10 +15,14 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <title id="title">Shopping Cart</title>
 </head>
 
 <body>
+    <!-- Header Start -->
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -32,17 +34,14 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="shopping-cart position-relative">
                     <button type="button" class="btn-cart btn btn-dark position-relative">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="item-count"
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2">0</span>
                     </button>
-
-                    <div class="shopping-cart-list bg-dark">
+                    <div class="shopping-cart-list bg-dark d-none">
                         <b class="fs-5 text-white my-3">Shopping Cart</b>
-
                         <div class="list-item">
                             <div class="row aling-items-center text-white-50">
                                 <div class="col-md-3">
@@ -53,7 +52,7 @@
                                 </div>
                                 <div class="col-md-2">
                                     <div class="price">
-                                        399 $
+                                        $399
                                     </div>
                                 </div>
                                 <div class="col-md-2">
@@ -68,6 +67,95 @@
             </div>
         </nav>
     </header>
+    <!-- Header End -->
+
+
+
+    <!-- Section Start -->
+    <section class="products mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-3">
+                    <!-- align-items-stretch text kutusunun esnemesi için kullanıldı -->
+                    <div class="card">
+                        <img src="images/XBOX.jpg" class="section-images card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Xbox Series X</h5>
+                            <p class="card-text">Xbox Series X, HDR'ın göz alıcılığıyla 120 FPS'ye kadar etkileyici ve
+                                sorunsuz kare
+                                hızları sunar. Gerçekçi 4K ile daha net karakterler, daha aydınlık dünyalar ve inanılmaz
+                                detayların tadını çıkarın.</p>
+                        </div>
+                        <div class="d-flex justify-content-between p-3">
+                            <a class="btn btn-success" href="#">Add to Cart</a>
+                            <span
+                                class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$499</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-3">
+                    <div class="card">
+                        <img src="images/PS4.jpg" class="section-images card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Playstation 4</h5>
+                            <p class="card-text">Oyunlarınızı, uygulamalarınızı, ekran görüntülerinizi ve videolarınızı
+                                orijinal PS4
+                                modelinden daha ince ve daha hafif olan ve Jet Siyah ve daha fazla renk seçeneğine sahip
+                                PS4 konsolunda 1 TB'ye kadar depolama alanıyla depolayın.</p>
+                        </div>
+                        <div class="d-flex justify-content-between p-3">
+                            <a class="btn btn-success" href="#">Add to Cart</a>
+                            <span
+                                class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$199</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-3">
+                    <div class="card">
+                        <img src="images/VR.jpg" class="section-images card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Oculus Quest 2</h5>
+                            <p class="card-text">Standart VR gözlükler izlediğiniz anı yaşıyor gibi gerçeklik algısı
+                                oluşturur. Ancak Oculus Quest 2 ile bundan çok daha fazlasını deneyimleyebilirsiniz.
+                                Metaverse evreniyle desteklenen Quest 2 ile arkadaşlarınızla buluşup istediğiniz yerde
+                                sohbet edebilir veya çeşitli etkinliklere katılabilirsiniz.</p>
+                        </div>
+                        <div class="d-flex justify-content-between p-3">
+                            <a class="btn btn-success" href="#">Add to Cart</a>
+                            <span
+                                class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$299</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-3">
+                    <div class="card">
+                        <img src="images/headphone.jpg" class="section-images card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jbl Quantum 910</h5>
+                            <p class="card-text">OJBL Quantum 910 Kablosuz kulaklık, sizi hareketin merkezinde tutmak
+                                için entegre kafa takibi ile hassas, çift uzamsal, yüksek çözünürlüklü ses sunar Quantum
+                                910 Wireless 39 saate kadar pil ömrüne sahiptir, ancak oyun seansları
+                                sırasında oynarken bile şarj edebilirsiniz. Ve benzersiz ergonomik konfor sunar.</p>
+                        </div>
+                        <div class="d-flex justify-content-between p-3">
+                            <a class="btn btn-success" href="#">Add to Cart</a>
+                            <span
+                                class="price badge rounded-pill bg-warning text-dark d-flex align-items-center">$120</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section End -->
+
+
+
+
+
 </body>
 
 <script type="module" src="main.js"></script>

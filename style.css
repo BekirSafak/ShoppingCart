@@ -16,3 +16,7 @@
 .list-item {
     margin-top: 1rem;
 }
+
+.section-images {
+    height: 200px !important;
+}
