@@ -104,7 +104,7 @@ for (let i = 0; i < card.length; i++) {
 
 // ? Toggle işlemi için gerekli. DOM yüklendiğinde çalışacak.
 document.addEventListener("DOMContentLoaded", () => {
-    let ui = new IU();
+    let ui = new UI();
     ui.cardToggle();
 })
 // ? Toggle işlemi için gerekli. DOM yüklendiğinde çalışacak.
