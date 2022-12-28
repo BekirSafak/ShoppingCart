@@ -57,6 +57,12 @@ class UI {
         let cardListItem = cardList.getElementsByClassName('list-item');
         let itemCount = document.getElementById('item-count');
         itemCount.innerHTML = cardListItem.length;
+    };
+
+    cardToggle() {
+        cardBTN.addEventListener('click', function () {
+            cardList.classList.toggle('d-none');
+        })
     }
 }
 
@@ -96,9 +102,9 @@ for (let i = 0; i < card.length; i++) {
 }
 // ? Burası tıklanan butona göre card içeriğindeki title,price,image değerlerini getiriyor.
 
-function cardToggle() {
-    cardBTN.addEventListener('click', function () {
-        cardList.classList.toggle('d-none');
-    })
-}
-cardToggle();
+// ? Toggle işlemi için gerekli. DOM yüklendiğinde çalışacak.
+document.addEventListener("DOMContentLoaded", () => {
+    let ui = new IU();
+    ui.cardToggle();
+})
+// ? Toggle işlemi için gerekli. DOM yüklendiğinde çalışacak.
